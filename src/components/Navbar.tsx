@@ -8,7 +8,6 @@ const links = [
   { label: 'Proyectos', href: '/proyectos' },
   { label: 'Competencias', href: '/competencias' },
   { label: 'Logros', href: '/logros' },
-  { label: 'Sobre mí', href: '/sobre-mi' },
   { label: 'Formación', href: '/formacion' },
   { label: 'Contacto', href: '/contacto' },
 ]

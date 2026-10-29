@@ -23,10 +23,10 @@ export interface Experience {
   logo: string
   screenshot: string
   role: string
-  responsibilities: string
+  responsibilities: string[]
   technologies: string[]
   dates: string
-  results: string
+  results: string[]
 }
 
 export type ProjectStatus = 'Desarrollado' | 'Proyectos académicos' | 'Propuesta de proyecto'

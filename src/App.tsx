@@ -4,7 +4,6 @@ import { HashRouter, Link, Navigate, Route, Routes, useLocation } from 'react-ro
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
-import About from './sections/About'
 import Achievements from './sections/Achievements'
 import Contact from './sections/Contact'
 import Education from './sections/Education'
@@ -19,7 +18,6 @@ const pages = [
   { path: '/proyectos', label: 'Proyectos', title: 'Proyectos' },
   { path: '/competencias', label: 'Competencias', title: 'Competencias' },
   { path: '/logros', label: 'Logros', title: 'Logros y certificaciones' },
-  { path: '/sobre-mi', label: 'Sobre mí', title: 'Sobre mí' },
   { path: '/formacion', label: 'Formación', title: 'Formación académica' },
   { path: '/contacto', label: 'Contacto', title: 'Contacto' },
 ]
@@ -79,9 +77,8 @@ export default function App() {
             <Route path="/proyectos" element={<PageFrame index={2}><Projects /></PageFrame>} />
             <Route path="/competencias" element={<PageFrame index={3}><Skills /></PageFrame>} />
             <Route path="/logros" element={<PageFrame index={4}><Achievements /></PageFrame>} />
-            <Route path="/sobre-mi" element={<PageFrame index={5}><About /></PageFrame>} />
-            <Route path="/formacion" element={<PageFrame index={6}><Education /></PageFrame>} />
-            <Route path="/contacto" element={<PageFrame index={7}><Contact /></PageFrame>} />
+            <Route path="/formacion" element={<PageFrame index={5}><Education /></PageFrame>} />
+            <Route path="/contacto" element={<PageFrame index={6}><Contact /></PageFrame>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

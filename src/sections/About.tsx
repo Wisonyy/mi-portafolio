@@ -11,7 +11,7 @@ const facts = [
 export default function About() {
   return (
     <section className="section-wrap" id="sobre-mi">
-      <SectionHeading eyebrow="06 / Sobre mí" title="Sobre mí." />
+      <SectionHeading eyebrow="Mi perfil" title="Sobre mí." />
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="card-surface rounded-2xl p-7 sm:p-9">
           <p className="text-base leading-8 text-slate-300 sm:text-lg">{profile.aboutDescription}</p>

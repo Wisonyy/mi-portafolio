@@ -1,9 +1,23 @@
-import { ArrowDown, ArrowUpRight, BriefcaseBusiness, Code2, Sparkles } from 'lucide-react'
+import {
+  ArrowDown,
+  ArrowUpRight,
+  BrainCircuit,
+  BriefcaseBusiness,
+  Code2,
+  Database,
+  Smartphone,
+  Sparkles,
+} from 'lucide-react'
 import { Link } from 'react-router-dom'
 import OptionalImage from './OptionalImage'
 import { profile } from '../data/profile'
 
-const interests = ['Desarrollo web', 'Aplicaciones móviles', 'Inteligencia artificial']
+const interests = [
+  { label: 'Desarrollo web', icon: Code2 },
+  { label: 'Bases de datos', icon: Database },
+  { label: 'Aplicaciones móviles', icon: Smartphone },
+  { label: 'Inteligencia artificial', icon: BrainCircuit },
+]
 
 export default function Hero() {
   return (
@@ -14,7 +28,7 @@ export default function Hero() {
         <div className="animate-rise">
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/[0.07] px-4 py-2 text-xs font-medium tracking-wide text-blue-100">
             <span className="size-1.5 rounded-full bg-accent" />
-            {profile.semester} · {profile.institution}
+            Estudiante de {profile.institution} · {profile.semester}
           </div>
           <p className="mb-3 text-lg text-slate-300">Hola, soy</p>
           <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -23,9 +37,10 @@ export default function Hero() {
           <p className="mt-5 text-2xl font-medium text-accent sm:text-3xl">{profile.title}</p>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">{profile.heroDescription}</p>
           <div aria-label="Áreas de interés" className="mt-7 flex flex-wrap gap-2.5">
-            {interests.map((interest) => (
-              <span className="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-xs text-slate-300 sm:text-sm" key={interest}>
-                {interest}
+            {interests.map(({ label, icon: Icon }) => (
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-xs text-slate-300 sm:text-sm" key={label}>
+                <Icon aria-hidden="true" className="text-accent" size={15} />
+                {label}
               </span>
             ))}
           </div>
@@ -39,14 +54,14 @@ export default function Hero() {
           </div>
         </div>
         <div className="animate-rise animation-delay-150">
-          <div className="profile-frame relative mx-auto max-w-sm rounded-[2rem] p-3 shadow-glow">
-            <div className="overflow-hidden rounded-[1.5rem]">
+          <div className="profile-frame relative mx-auto aspect-square w-full max-w-[19rem] rounded-full p-3 shadow-glow sm:max-w-sm">
+            <div className="size-full overflow-hidden rounded-full border border-white/10 bg-panel">
               <OptionalImage
-                alt={`Fotografía profesional de ${profile.name}`}
-                className="aspect-[4/5] w-full object-cover"
+                alt={`Retrato de ${profile.name}`}
+                className="size-full object-cover object-top"
                 fallbackClassName="grid place-items-center bg-gradient-to-br from-blue-950/60 via-panel to-violet-950/40 text-7xl font-semibold text-accent"
                 fallback="W"
-                src="/images/perfil.jpg"
+                src="/images/perfil.jpeg"
               />
             </div>
             <div className="absolute -bottom-5 -left-5 flex items-center gap-3 rounded-2xl border border-white/10 bg-panel/95 px-4 py-3 shadow-xl backdrop-blur">

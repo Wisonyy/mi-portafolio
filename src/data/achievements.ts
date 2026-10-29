@@ -1,30 +1,38 @@
-export const achievements = [
-  {
-    title: 'Desarrollo de un proyecto de inteligencia artificial',
-    description:
-      'Desarrollo de un proyecto orientado al reconocimiento de señas manuales de las vocales en español, aplicando conocimientos de inteligencia artificial y visión por computadora.',
-  },
-  {
-    title: 'Formación en desarrollo de software',
-    description:
-      'Avance en la carrera de Desarrollo de Software con Inteligencia Artificial en SENATI, mediante actividades académicas y proyectos prácticos.',
-  },
-  {
-    title: 'Desarrollo de aplicaciones móviles',
-    description:
-      'Aplicación de conocimientos adquiridos durante la formación académica para desarrollar soluciones móviles.',
-  },
-  {
-    title: 'Experiencia en entornos empresariales',
-    description:
-      'Participación en entornos relacionados con sistemas ERP y plataformas de ventas online.',
-  },
-]
+export type Certification = {
+  title: string
+  institution: string
+  image?: string
+}
 
-export const certificationAreas = [
-  'Desarrollo de software',
-  'Inteligencia artificial',
-  'Desarrollo web',
-  'Desarrollo de aplicaciones móviles',
-  'Herramientas digitales y productividad',
+export const certifications: Certification[] = [
+  {
+    title: 'Computer Hardware Basics',
+    institution: 'Cisco Networking Academy',
+    image: '/images/computer-hardware-basics.png',
+  },
+  {
+    title: 'Cyber Threat Management',
+    institution: 'Cisco Networking Academy',
+    image: '/images/cyber-threat-management.png',
+  },
+  {
+    title: 'Introduction to Cybersecurity',
+    institution: 'Cisco Networking Academy',
+    image: '/images/introduction-to-cybersecurity.png',
+  },
+  {
+    title: 'Introduction to Internet of Things',
+    institution: 'Cisco Networking Academy',
+    image: '/images/introduction-to-iot.png',
+  },
+  {
+    title: 'Networking Basics',
+    institution: 'Cisco Networking Academy',
+    image: '/images/networking-basics.png',
+  },
+  {
+    title: 'Python Essentials 1',
+    institution: 'Cisco Networking Academy',
+    image: '/images/python-essentials-1.1.png',
+  },
 ]

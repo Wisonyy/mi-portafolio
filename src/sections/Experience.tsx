@@ -5,12 +5,18 @@ import SectionHeading from '../components/SectionHeading'
 import { experiences } from '../data/experiences'
 
 function EditableDetail({ label, value }: { label: string; value: string | string[] }) {
-  const content = Array.isArray(value) ? value.join(', ') : value
-
   return (
     <div>
       <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">{label}</dt>
-      <dd className="mt-1 text-sm leading-6 text-slate-300">{content || 'Por completar'}</dd>
+      <dd className="mt-1 text-sm leading-6 text-slate-300">
+        {Array.isArray(value) ? (
+          value.length > 0 ? (
+            <ul className="space-y-1">
+              {value.map((item) => <li key={item}>• {item}</li>)}
+            </ul>
+          ) : 'Por completar'
+        ) : value || 'Por completar'}
+      </dd>
     </div>
   )
 }

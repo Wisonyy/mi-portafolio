@@ -2,7 +2,7 @@ import type { Profile } from '../types/portfolio'
 
 export const profile: Profile = {
   name: 'Wilson Paredes Huacarpuma',
-  title: 'Desarrollador de software',
+  title: 'Desarrollador de software en formación',
   githubUrl: 'https://github.com/Wisonyy',
   email: 'fortnitewilson123@gmail.com',
   whatsappUrl: 'https://wa.me/51924728010',
@@ -11,7 +11,7 @@ export const profile: Profile = {
   program: 'Desarrollo de Software con Inteligencia Artificial',
   institution: 'SENATI',
   heroDescription:
-    'Desarrollo soluciones de software y exploro tecnologías para crear aplicaciones web, móviles y proyectos relacionados con la inteligencia artificial. Me interesa aprender continuamente, organizar mi trabajo y resolver problemas mediante soluciones prácticas',
+    'Desarrollo soluciones web, móviles y proyectos de inteligencia artificial. Me interesa aprender nuevas tecnologías, resolver problemas y convertir ideas en proyectos útiles.',
   aboutDescription:
-    'Soy Wilson Paredes Huacarpuma, desarrollador de software en formación profesional en SENATI. Me interesa construir aplicaciones útiles, trabajar con distintas tecnologías y fortalecer mis conocimientos mediante proyectos prácticos y experiencias profesionales. Busco seguir creciendo en el desarrollo de software y aportar soluciones bien organizadas, funcionales y fáciles de utilizar',
+    'Me formo en Desarrollo de Software con Inteligencia Artificial en SENATI. Fortalezco mis conocimientos con proyectos prácticos y aprendizaje continuo.',
 }

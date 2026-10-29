@@ -8,7 +8,7 @@ export const projects: Project[] = [
     status: 'Desarrollado',
     area: 'Inteligencia artificial y visión por computadora',
     evidence: 'Proyecto de reconocimiento de vocales mediante señas.',
-    image: '/images/reconocimiento-senas.png',
+    image: '/images/econocimiento-senas.jpg',
     technologies: [],
     contribution: 'Desarrollo de una solución para el reconocimiento de señas manuales.',
     visible: true,

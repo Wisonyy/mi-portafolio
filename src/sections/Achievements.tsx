@@ -1,52 +1,46 @@
-import { Award, BrainCircuit, BriefcaseBusiness, GraduationCap, Smartphone } from 'lucide-react'
+import { Award } from 'lucide-react'
 import SectionHeading from '../components/SectionHeading'
-import { achievements, certificationAreas } from '../data/achievements'
-
-const icons = [BrainCircuit, GraduationCap, Smartphone, BriefcaseBusiness]
+import { certifications } from '../data/achievements'
 
 export default function Achievements() {
   return (
     <section className="section-wrap" id="logros">
       <SectionHeading
-        eyebrow="05 / Logros y certificaciones"
-        title="Logros destacados"
-        description="Avances y experiencias relacionados con mi formación y proyectos, descritos sin agregar resultados cuantificables."
+        eyebrow="05 / Certificaciones"
+        title="Certificaciones"
+        description="Certificaciones obtenidas y evidencia de cada una."
       />
-      <div className="grid gap-4 md:grid-cols-2">
-        {achievements.map((achievement, index) => {
-          const Icon = icons[index]
-          return (
-            <article className="card-surface rounded-2xl p-6 sm:p-7" key={achievement.title}>
-              <span className="grid size-11 place-items-center rounded-xl bg-accent/10 text-accent">
-                <Icon aria-hidden="true" size={20} />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold text-white">{achievement.title}</h3>
-              <p className="mt-2 text-sm leading-7 text-slate-400">{achievement.description}</p>
+      {certifications.length > 0 ? (
+        <div className="grid gap-4 md:grid-cols-2">
+          {certifications.map((certification) => (
+            <article className="card-surface overflow-hidden rounded-2xl" key={certification.title}>
+              {certification.image && (
+                <img
+                  alt={`Certificado de ${certification.title}`}
+                  className="aspect-[4/3] w-full object-contain bg-white p-3"
+                  src={certification.image}
+                />
+              )}
+              <div className="p-6">
+                <span className="grid size-11 place-items-center rounded-xl bg-accent/10 text-accent">
+                  <Award aria-hidden="true" size={20} />
+                </span>
+                <h3 className="mt-4 text-lg font-semibold text-white">{certification.title}</h3>
+                <p className="mt-2 text-sm text-slate-400">{certification.institution}</p>
+              </div>
             </article>
-          )
-        })}
-      </div>
-      <div className="card-surface mt-6 rounded-2xl p-6 sm:p-7">
-        <div className="flex items-start gap-4">
-          <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-violet-400/10 text-violet-300">
-            <Award aria-hidden="true" size={20} />
-          </span>
-          <div>
-            <h3 className="text-lg font-semibold text-white">Certificaciones</h3>
-            <p className="mt-2 text-sm leading-6 text-slate-400">
-              Espacio para agregar certificaciones y cursos completados. Cada registro debe incluir su nombre real,
-              institución emisora y evidencia correspondiente.
-            </p>
-            <p className="mt-4 text-xs text-slate-500">Áreas relacionadas:</p>
-            <ul className="mt-2 flex flex-wrap gap-2">
-              {certificationAreas.map((area) => (
-                <li className="technology-tag" key={area}>{area}</li>
-              ))}
-            </ul>
-            <p className="mt-4 text-xs text-slate-500">Aún no se han proporcionado certificaciones para mostrar.</p>
+          ))}
+        </div>
+      ) : (
+        <div className="card-surface rounded-2xl p-6 sm:p-7">
+          <div className="flex items-center gap-4">
+            <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent/10 text-accent">
+              <Award aria-hidden="true" size={20} />
+            </span>
+            <p className="text-sm leading-6 text-slate-400">Aún no hay certificaciones agregadas.</p>
           </div>
         </div>
-      </div>
+      )}
     </section>
   )
 }
